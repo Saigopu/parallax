@@ -1,0 +1,189 @@
+* {
+    /*this is good practice */
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.wrapper {
+    /*having a wrapper is good practice*/
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+    perspective: 10px;
+    /*why perspective is given here*/
+    overflow-x: hidden;
+    /*why overflow here read the comment below*/
+}
+
+.container {
+    z-index: -1;/*here z-index is made -1 to make the container layer below the section layer*/
+    position: relative;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    /*refer this https://developer.mozilla.org/en-US/docs/Web/CSS/transform-style*/
+    /* overflow: auto; */
+    /*worth reading again: - we should not set overflow properties here as overflow deals with x and y axis so any item placed in this container will not be affected with translation along Z-axis because it will be out of the bound of the XY plane which is dealt by overflow, thats why we set overflow proerties in wrapper and having a wrapper is good practice. And why this overflow is occuring: - because when image is translated in z-axis its size will not be decreased but looks smaller as it is taken away far and we are scaling it to visible in big size so overall space occupied the image will be increased(the space other than picture is blank which is overflown out of the wrapper and obviously from body)*/
+    /*background image is moving slow because it is placed far away along z-axis which is called parallax effect*/
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    object-fit: cover;
+    /*refer(worth reading again) https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit  https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element  if unable to understand any term in the given links then use chatgpt for their definition and explaination*/
+}
+
+#hills {
+    transform: translateZ(-39px) scale(5);
+}
+
+#man {
+    transform: translateZ(-15px) scale(2.5);
+}
+
+/* .just{
+border: 1px solid;
+height: 2000px;
+} */
+
+h1 {
+    position: absolute;
+    top: 7rem;
+    font-size: 8rem;
+    color: white;
+    text-shadow: 0 0 10px hwb(0deg 0% 100% / 30%);
+}
+
+/*til here the parallax effect is created */
+
+
+section{
+    background-color: rgb(45, 45, 45);
+    color: white;
+    padding: 5rem 0;
+}
+.secheading{
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+
+.desc{
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 0.5rem 2.5rem;
+    top: 50%;
+    left: 40%;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+.text{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+.bg{
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg1{
+    background-image: url(./sport-1.jpg);
+}
+.bg2{
+    background-image: url(./sport-2.jpg);
+}
+.bg3{
+    background-image: url(./sport-3.jpg);
+}
+
+
+/*
+this part is the section below the parallax effect of the web page and built by my self by unwrapping the already existing one and used the method which i have learnt before to play with the background images by creating pseudo elements. One new property learnt i.e., background-attachment:fixed which makes the background image not to scroll and remaining content is scrolled over it
+
+section {
+    background-color: rgb(49, 48, 48);
+    color: white;
+    padding: 3rem 0;
+    
+}
+h2{
+    font-size: 3rem;
+    padding: 0 5rem;
+}
+p{
+    font-size: 1.5rem;
+    padding: 0 5rem;
+    margin: 1rem;
+}
+
+.bg{
+    position: relative;
+    min-height: 500px;
+}
+.bg h2{
+    position: absolute;
+    top: 28%;
+    left: 41%;
+    color: black;
+    background-color: white;
+    padding: 10px;
+}
+
+.bg1::before{
+    content: "";
+    position: absolute;
+    background: no-repeat center/cover url(./sport-1.jpg);
+    background-attachment: fixed;
+    top: 0px;
+    left: 0px;
+    
+    height: 100%;
+    width: 100%;
+}
+.bg2::before{
+    content: "";
+    position: absolute;
+    background: no-repeat center/cover url(./sport-2.jpg);
+    background-attachment: fixed;
+    top: 0px;
+    left: 0px;
+    
+    height: 100%;
+    width: 100%;
+}
+.bg3::before{
+    content: "";
+    position: absolute;
+    background: no-repeat center/cover url(./sport-3.jpg);
+    background-attachment: fixed;
+    top: 0px;
+    left: 0px;
+    
+    height: 100%;
+    width: 100%;
+}
+
+
+*/

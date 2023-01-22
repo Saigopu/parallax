@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallax Effect</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <!-- to make text center we created this container and made to flex -->
+        <img src="background.png" id="hills" alt="mountains" />
+        <img src="foreground.png" id="man" alt="human" />
+        <h1>ADVENTURE</h1>
+      </div>
+
+      <!-- <div class="just">
+
+    </div> -->
+      <section>
+        <h2 class="secheading">Adventure Time!</h2>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui
+          necessitatibus commodi alias? Veritatis, eligendi nisi. Amet
+          exercitationem, recusandae dolore corrupti laborum aperiam repellendus
+          natus voluptatem quam atque aliquam beatae. Odit deserunt nisi optio
+          eveniet? Aliquam possimus molestiae, ullam illum accusamus autem
+          accusantium! Voluptate laboriosam eum saepe ex veritatis est? Numquam
+          eaque autem labore provident dolorum, velit omnis mollitia eos
+          adipisci!
+
+          <br />
+          <br />
+
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, itaque
+          hic tempore rem eveniet sed repudiandae molestiae magnam aut quod
+          consequatur, harum, totam beatae fugiat ipsam? Explicabo, blanditiis
+          quod similique fugiat fugit ea expedita deleniti doloribus, delectus
+          perferendis, tempore amet maiores libero sapiente voluptatem
+          reprehenderit? Illum alias commodi cupiditate corporis mollitia ab
+          quaerat, ipsum est excepturi vitae a sunt optio.
+        </p>
+        <div class="bg bg1">
+          <h2 class="desc">BIKING</h2>
+        </div>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui
+          necessitatibus commodi alias? Veritatis, eligendi nisi. Amet
+          exercitationem, recusandae dolore corrupti laborum aperiam repellendus
+          natus voluptatem quam atque aliquam beatae. Odit deserunt nisi optio
+          eveniet? Aliquam possimus molestiae, ullam illum accusamus autem
+          accusantium! Voluptate laboriosam eum saepe ex veritatis est? Numquam
+          eaque autem labore provident dolorum, velit omnis mollitia eos
+          adipisci!
+
+          <br />
+          <br />
+
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, itaque
+          hic tempore rem eveniet sed repudiandae molestiae magnam aut quod
+          consequatur, harum, totam beatae fugiat ipsam? Explicabo, blanditiis
+          quod similique fugiat fugit ea expedita deleniti doloribus, delectus
+          perferendis, tempore amet maiores libero sapiente voluptatem
+          reprehenderit? Illum alias commodi cupiditate corporis mollitia ab
+          quaerat, ipsum est excepturi vitae a sunt optio.
+        </p>
+        <div class="bg bg2">
+          <h2 class="desc">PARA GLIDING</h2>
+        </div>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui
+          necessitatibus commodi alias? Veritatis, eligendi nisi. Amet
+          exercitationem, recusandae dolore corrupti laborum aperiam repellendus
+          natus voluptatem quam atque aliquam beatae. Odit deserunt nisi optio
+          eveniet? Aliquam possimus molestiae, ullam illum accusamus autem
+          accusantium! Voluptate laboriosam eum saepe ex veritatis est? Numquam
+          eaque autem labore provident dolorum, velit omnis mollitia eos
+          adipisci!
+
+          <br />
+          <br />
+
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, itaque
+          hic tempore rem eveniet sed repudiandae molestiae magnam aut quod
+          consequatur, harum, totam beatae fugiat ipsam? Explicabo, blanditiis
+          quod similique fugiat fugit ea expedita deleniti doloribus, delectus
+          perferendis, tempore amet maiores libero sapiente voluptatem
+          reprehenderit? Illum alias commodi cupiditate corporis mollitia ab
+          quaerat, ipsum est excepturi vitae a sunt optio.
+        </p>
+        <div class="bg bg3">
+          <h2 class="desc">SURFING</h2>
+        </div>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui
+          necessitatibus commodi alias? Veritatis, eligendi nisi. Amet
+          exercitationem, recusandae dolore corrupti laborum aperiam repellendus
+          natus voluptatem quam atque aliquam beatae. Odit deserunt nisi optio
+          eveniet? Aliquam possimus molestiae, ullam illum accusamus autem
+          accusantium! Voluptate laboriosam eum saepe ex veritatis est? Numquam
+          eaque autem labore provident dolorum, velit omnis mollitia eos
+          adipisci!
+
+          <br />
+          <br />
+
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, itaque
+          hic tempore rem eveniet sed repudiandae molestiae magnam aut quod
+          consequatur, harum, totam beatae fugiat ipsam? Explicabo, blanditiis
+          quod similique fugiat fugit ea expedita deleniti doloribus, delectus
+          perferendis, tempore amet maiores libero sapiente voluptatem
+          reprehenderit? Illum alias commodi cupiditate corporis mollitia ab
+          quaerat, ipsum est excepturi vitae a sunt optio.
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
+
+<!-- https://codehelp-parallax-website.netlify.app/ this is the site we are replicating -->
+
+<!-- 
+  worth reading again
+  DIFFERENCE BETWEEN SETTING AN IMAGE AS BACKGROUND USING IMG TAG AND BACKGROUND-IMG PROPERTY
+  CONTENT 
+Use an <img> tag only for content (logo, diagram or person) related and 
+not just being used as a design element, while background image has 
+nothing to do with the content and is purely a design element. 
+ 
+ACCESSIBILITY 
+Google doesn’t index background images automatically. While in case 
+of <img> tag it is possible to recognised by google. 
+The reason behind using <img> tag that is alt=””, src=”” and title=”” 
+Of img tag (google recognised the images by using these terms). 
+ 
+PERFORMANCE 
+The number of large sized background images in the CSS will take 
+longer times to parse while in case of HTML <img> tag it is easy to 
+parse. So, CSS background image will pull down the loading of web page 
+and decrease the performance of web page. 
+ 
+PRINTING 
+Use HTML <img> tag if you want the images to be included by default 
+while users print the page and if you don't want the images to be 
+included in print, you can go for CSS background image property. 
+ 
+CONCLUSION 
+HTML <img> tags should be used when it is an important part of the 
+content. The decision of choosing between the two depends on the 
+question if the image help people to understand the content better.
+ -->
